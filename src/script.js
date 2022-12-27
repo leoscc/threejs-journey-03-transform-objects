@@ -13,9 +13,8 @@ const cubeMaterial = new THREE.MeshBasicMaterial({
 });
 const cubeMesh = new THREE.Mesh(cubeGeometry, cubeMaterial);
 cubeMesh.position.set(0.7, -0.6, 1);
-cubeMesh.scale.x = 2;
-cubeMesh.scale.y = 0.5;
-cubeMesh.scale.z = 0.5;
+
+cubeMesh.rotation.y = Math.PI;
 
 scene.add(cubeMesh);
 
