@@ -17,6 +17,8 @@ cubeMesh.position.y = -0.6;
 cubeMesh.position.z = 1;
 scene.add(cubeMesh);
 
+console.log(cubeMesh.position.length());
+
 const sizes = {
   width: 800,
   height: 600,
