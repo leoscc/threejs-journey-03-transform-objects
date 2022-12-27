@@ -12,13 +12,11 @@ const cubeMaterial = new THREE.MeshBasicMaterial({
   color: 0xff0000,
 });
 const cubeMesh = new THREE.Mesh(cubeGeometry, cubeMaterial);
-cubeMesh.position.x = 0.7;
-cubeMesh.position.y = -0.6;
-cubeMesh.position.z = 1;
+// cubeMesh.position.x = 0.7;
+// cubeMesh.position.y = -0.6;
+// cubeMesh.position.z = 1;
+cubeMesh.position.set(0.7, -0.6, 1);
 scene.add(cubeMesh);
-
-cubeMesh.position.normalize();
-console.log(cubeMesh.position.length());
 
 const sizes = {
   width: 800,
