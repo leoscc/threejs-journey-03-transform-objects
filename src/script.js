@@ -12,11 +12,12 @@ const cubeMaterial = new THREE.MeshBasicMaterial({
   color: 0xff0000,
 });
 const cubeMesh = new THREE.Mesh(cubeGeometry, cubeMaterial);
-// cubeMesh.position.x = 0.7;
-// cubeMesh.position.y = -0.6;
-// cubeMesh.position.z = 1;
 cubeMesh.position.set(0.7, -0.6, 1);
 scene.add(cubeMesh);
+
+// Axes Helper
+const axesHelper = new THREE.AxesHelper(2);
+scene.add(axesHelper);
 
 const sizes = {
   width: 800,
@@ -25,7 +26,8 @@ const sizes = {
 
 // Camera
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height);
-camera.position.z = 3;
+// camera.position.z = 3;
+camera.position.set(1, 1, 3);
 scene.add(camera);
 
 // WebGL Renderer
