@@ -14,7 +14,10 @@ const cubeMaterial = new THREE.MeshBasicMaterial({
 const cubeMesh = new THREE.Mesh(cubeGeometry, cubeMaterial);
 cubeMesh.position.set(0.7, -0.6, 1);
 
-cubeMesh.rotation.y = Math.PI;
+// do it before changing the rotation
+cubeMesh.rotation.reorder("YXZ");
+cubeMesh.rotation.x = Math.PI * 0.25;
+cubeMesh.rotation.y = Math.PI * 0.25;
 
 scene.add(cubeMesh);
 
