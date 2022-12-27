@@ -17,8 +17,6 @@ cubeMesh.position.y = -0.6;
 cubeMesh.position.z = 1;
 scene.add(cubeMesh);
 
-console.log(cubeMesh.position.length());
-
 const sizes = {
   width: 800,
   height: 600,
@@ -28,6 +26,9 @@ const sizes = {
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height);
 camera.position.z = 3;
 scene.add(camera);
+
+// distance between the camera and the object
+console.log(cubeMesh.position.distanceTo(camera.position));
 
 // WebGL Renderer
 const renderer = new THREE.WebGLRenderer({
