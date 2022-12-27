@@ -24,7 +24,7 @@ const sizes = {
 // Camera
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height);
 camera.position.z = 3;
-camera.lookAt(new THREE.Vector3(3, 0, 0));
+camera.lookAt(cubeMesh.position);
 scene.add(camera);
 
 // WebGL Renderer
