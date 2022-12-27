@@ -14,11 +14,6 @@ const cubeMaterial = new THREE.MeshBasicMaterial({
 const cubeMesh = new THREE.Mesh(cubeGeometry, cubeMaterial);
 cubeMesh.position.set(0.7, -0.6, 1);
 
-// do it before changing the rotation
-cubeMesh.rotation.reorder("YXZ");
-cubeMesh.rotation.x = Math.PI * 0.25;
-cubeMesh.rotation.y = Math.PI * 0.25;
-
 scene.add(cubeMesh);
 
 const sizes = {
@@ -29,6 +24,7 @@ const sizes = {
 // Camera
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height);
 camera.position.z = 3;
+camera.lookAt(new THREE.Vector3(3, 0, 0));
 scene.add(camera);
 
 // WebGL Renderer
